@@ -1,0 +1,2 @@
+let userMove;
+let computerMove;

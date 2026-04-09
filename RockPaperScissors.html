@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Rock paper Scissors</h3>
+  <button onclick = "
+    userMove = 1;
+    computerMove = Math.ceil(Math.random() * 3); // 1 2 3
+    // 
+
+    if(userMove === computerMove){
+      console.log(`computer picked ` + computerMove);
+      console.log(`You both picked rock. It's a tie!`);
+    }else if(userMove === 1 && computerMove === 3){
+      console.log(`computer picked ` + computerMove);
+      console.log(`You picked rock and computer picked scissors. You win!`);
+    }else{
+      console.log(`computer picked ` + computerMove);
+      console.log(`You picked rock and computer picked paper. You lose!`);
+    }
+
+
+  "> Rock👊</button>
+
+
+  <button onclick = "
+    userMove = 2;
+    computerMove = Math.ceil(Math.random() * 3); // 1 2 3
+
+    
+    if(userMove === computerMove){
+      console.log(`computer picked ` + computerMove);
+      console.log(`You both picked paper. It's a tie!`);
+    }else if(userMove === 2 && computerMove === 1){
+      console.log(`computer picked ` + computerMove);
+      console.log(`You picked paper and computer picked rock. You win!`);
+    }else{
+      console.log(`computer picked ` + computerMove);
+      console.log(`You picked paper and computer picked scissors. You lose!`);
+    }
+
+  "> Paper✋</button>
+
+
+  <button onclick = "
+    userMove = 3;
+    computerMove = Math.ceil(Math.random() * 3); // 1 2 3
+
+    
+    if(userMove === computerMove){
+      console.log(`computer picked ` + computerMove);
+      console.log(`You both picked rock. It's a tie!`);
+    }else if(userMove === 3 && computerMove === 2){
+      console.log(`computer picked ` + computerMove);
+      console.log(`You picked scissors and computer picked paper. You win!`);
+    }else{
+      console.log(`computer picked ` + computerMove);
+      console.log(`You picked scissors and computer picked rock. You lose!`);
+    }
+
+  "> Scissors✌️</button>
+
+  <script src = "rps12.js">
+      // rock = 1, paper = 2, scissor = 3
+  </script>
+</body>
+</html>

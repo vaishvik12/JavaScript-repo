@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button-style1{
+      background-color: black;
+      color : white;
+    }
+    .new-style{
+      background-color: green;
+      color : white;
+    }
+  </style>
+</head>
+<body>
+  <button class = "button-style1 js-button" 
+  id = "button1"
+  onclick = "activeButton(`#button1`)">button 1</button>
+  <button class = "button-style1 js-button"
+  id = "button2"
+  onclick = "activeButton(`#button2`)">button 2</button>
+  <button class = "button-style1 js-button"
+  id = "button3"
+  onclick = "activeButton(`#button3`)">button 3</button>
+  <script>
+
+function activeButton(buttonId){
+  let buttonList = document.querySelectorAll(".js-button");
+  
+  for(let i = 0; i < buttonList.length ; i++){ 
+     let button = buttonList[i];
+     console.log(button);
+     if(button.classList.contains("new-style")){
+      button.classList.remove("new-style");
+     }
+  }
+  document.querySelector(buttonId).classList.add("new-style");
+}
+  </script>
+</body>
+</html>

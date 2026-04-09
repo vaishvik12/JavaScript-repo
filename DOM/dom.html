@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .js-subscribe {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      border-radius: 30px;
+      /* padding-top:5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px; */
+      padding: 5px 10px;
+      border: none;
+    }
+
+    .js-subscribed {
+      color : black;
+      background-color : rgb(240,240,240);
+    }
+
+    .input{
+      padding : 10px;
+    }
+    .calculate-button{
+      background-color: green;
+      border: none;
+      color : rgb(256,256,256);
+      padding: 11px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe" onclick="subscribed();">Subscribe</button>
+  </div>
+
+  <div>
+    <p>Rock Paper Scissors</p>
+    <a href="RPS.html">Click to play...</a>
+  </div>
+
+  <div>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders Under $40 = +$10 shipping</p>
+    <p>orders Over $40 = FREE Shipping</p>
+    </p>
+    <input type="text" class = "input" id="js-input" placeholder="Cost of order" onkeydown="
+     if(event.key === 'Enter'){
+      calculateShipping();
+     }
+     ">
+    <button class = "calculate-button"
+     onclick="calculateShipping();">Calculate</button>
+    <p id="js-price"></p>
+  </div>
+  <script src="Scripts/dom.js"></script>
+</body>
+
+</html>

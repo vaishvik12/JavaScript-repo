@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Style/index.css">
+</head>
+<body onkeyup="
+let key = event.key;
+  if(key >= 0 && key <=9){
+  calculate(key);
+  }else if(key === `+` ||
+          key === `-`||
+          key === `*`||
+          key === `%` ||
+          key === `.`
+  ){
+    calculate(key);
+  }else if(key === `=` || key === 'Enter'){
+    showResult();
+  }
+">
+  <div>
+  <input type="text" id = "js-input">
+  </div>
+  <div>
+    <button
+     onclick="calculate(`1`);">1</button>
+    <button onclick="calculate(`2`);">2</button>
+    <button onclick="calculate(`3`);">3</button>
+    <button class = "special-buttons" onclick="calculate(` + `);">+</button>
+  </div>
+  <div>
+    <button onclick="calculate(`4`);">4</button>
+    <button onclick="calculate(`5`);">5</button>
+    <button onclick="calculate(`6`);">6</button>
+    <button class = "special-buttons"  onclick="calculate(` - `);">-</button>
+  </div>
+  <div>
+    <button onclick="calculate(`7`);">7</button>
+    <button onclick="calculate(`8`);">8</button>
+    <button onclick="calculate(`9`);">9</button>
+    <button class = "special-buttons" onclick="calculate(` * `);">*</button>
+  </div>
+  <div>
+    <button onclick="calculate(`0`);">0</button>
+    <button onclick="calculate(`.`);">.</button>
+    <button onclick="showResult();">=</button>
+    <button class = "special-buttons"  onclick="calculate(` / `);">/</button>
+  </div>
+  <div>
+    <button class = 'clear-button' onclick="resetValue();">clear</button>
+  </div>
+  <script src = "Scripts/index.js"></script>
+</body>
+</html>

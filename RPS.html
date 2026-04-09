@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Rock paper scissors</h2>
+  <button onclick="
+    userMove = 1;
+    computerMove = Math.ceil(Math.random() * 3);
+    
+    if(computerMove === 1){
+      computerMoveName = 'Rock';
+    }else if(computerMove === 2){
+      computerMoveName = 'Paper';
+    }else{
+      computerMoveName = 'Scissor';
+    }
+
+// 1 === 1
+    if(userMove === computerMove){
+      console.log(`You picked Rock, computer picked ${computerMoveName}It's a tie`);
+      // 1 === 2
+    }else if(userMove === 1 && computerMove === 2 ||
+      userMove === 2 && computerMove === 3 ||
+      userMove === 3 && computerMove === 1
+    ){
+      console.log(`You picked Rock, ComputerPicked ${computerMoveName}. Computer wins`
+      )
+      // 1 === 3
+    }else{
+      console.log(`You picked Rock, computer picked ${computerMoveName}. User wins`) 
+    }
+
+
+
+
+  ">Rock</button>
+
+  <button onclick="
+   userMove = 2;
+    computerMove = Math.ceil(Math.random() * 3);
+
+        if(computerMove === 1){
+      computerMoveName = 'Rock';
+    }else if(computerMove === 2){
+      computerMoveName = 'Paper';
+    }else{
+      computerMoveName = 'Scissor';
+    };
+
+      if(userMove === computerMove){
+      console.log(`You picked Paper, computer picked ${computerMoveName}It's a tie`);
+      // 1 === 2
+    }else if(userMove === 1 && computerMove === 2 ||
+      userMove === 2 && computerMove === 3 ||
+      userMove === 3 && computerMove === 1
+    ){
+      console.log(`You picked Paper, ComputerPicked ${computerMoveName}. Computer wins`
+      )
+      // 1 === 3
+    }else{
+      console.log(`You picked Paper, computer picked ${computerMoveName}. User wins`) 
+    };
+
+  ">Paper</button>
+
+  <button onclick="
+   userMove = 3;
+    computerMove = Math.ceil(Math.random() * 3);
+          if(computerMove === 1){
+      computerMoveName = 'Rock';
+    }else if(computerMove === 2){
+      computerMoveName = 'Paper';
+    }else{
+      computerMoveName = 'Scissor';
+    };
+
+      if(userMove === computerMove){
+      console.log(`You picked Scissors, computer picked ${computerMoveName}It's a tie`);
+      // 1 === 2
+    }else if(userMove === 1 && computerMove === 2 ||
+      userMove === 2 && computerMove === 3 ||
+      userMove === 3 && computerMove === 1
+    ){
+      console.log(`You picked Scissors, ComputerPicked ${computerMoveName}. Computer wins`
+      )
+      // 1 === 3
+    }else{
+      console.log(`You picked Scissors, computer picked ${computerMoveName}. User wins`) 
+    };
+  ">Scissor</button>
+
+  <script src="Rps.js"></script>
+</body>
+
+</html>

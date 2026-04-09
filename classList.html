@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    .unfollow{
+      background-color: rgb(50, 120,255);
+      border-radius: 5px;
+      color: white;
+      padding: 5px 10px;
+    }
+
+    .follow{
+      background-color: rgb(54, 53, 53);
+      color: white;
+    }
+    .dark{
+      background-color: black;
+    }
+    
+  </style>
+</head>
+<body>
+  <button class = "unfollow js-unfollow"
+  onclick = "follow();"
+  >Follow</button>
+
+  <button class = "js-dark"
+  onclick = "darkMode();">Dark mode</button>
+  <script>
+    function follow(){
+      let button = document.querySelector(".js-unfollow");
+
+      if(button.innerText != "Unfollow"){
+        button.innerText = `Unfollow`;
+        button.classList.add("follow");
+      }else{
+        button.innerHTML = `Follow`;
+        button.classList.remove("follow");
+      }
+      
+    }
+
+    function darkMode(){
+      let body = document.querySelector("body");      
+        body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>

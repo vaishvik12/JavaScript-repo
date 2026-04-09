@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id = "input"
+  onkeyup="displayOnDOM();"
+  onkeydown="
+    if(event.key === `Enter`){
+      calculatePrice();
+    }
+    ">
+  <button onclick = "calculatePrice();">Submit</button>
+  <p id = "result"></p>
+  <p id = "result2"></p>
+  <script src="Scripts/9g.js"></script>
+</body>
+</html>
