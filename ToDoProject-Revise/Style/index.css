@@ -1,0 +1,33 @@
+input{
+  padding: 10px;
+  text-align: right;
+}
+
+#add-button{
+  color : white;
+  background-color: green;
+  padding: 13px 20px;
+  border: none;
+}
+
+#todo-list,
+#input-div{
+  display: grid;
+  grid-template-columns: 200px 200px 150px;
+  column-gap: 5px;
+  row-gap: 5px;
+  align-items: center;
+}
+
+
+#delete-button{
+  padding : 10px;
+  background-color: red;
+  color : white;
+  border:  none;
+
+}
+
+#input-div{
+  margin-bottom: 10px;
+}
