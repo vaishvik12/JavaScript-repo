@@ -23,14 +23,16 @@ function renderTask(){
 
   let tasksHtml = ''; // accumlator variable
 
-  for(let i = 0; i < todoTask.length; i++){
-    let task = todoTask[i]; // object
+
+  todoTask.forEach((task, index) => {
     tasksHtml += `<div>${task.name}</div>
     <div> ${task.date}</div>
      <button id = 'delete-button'
-     onclick = "deleteTask(${i});">Delete</button>`
+     onclick = "deleteTask(${index});">Delete</button>`
   }
+)
 
+ 
   taskListEl.innerHTML = tasksHtml;
 } 
 
