@@ -13,6 +13,26 @@ let score = JSON.parse(localStorage.getItem("score")) ||
 let resultPara = document.querySelector("#js-result");
 let scorePara = document.querySelector("#js-score");
 
+let rockButton = document.querySelector("#rock-button");
+let paperButton = document.querySelector("#paper-button");
+let scissorButton = document.querySelector("#scissor-button");
+let resetButton = document.querySelector("#reset-button");
+let autoPlayButton = document.querySelector("#auto-play-button");
+
+
+rockButton.addEventListener("click", () => {
+  playGame(0);
+});
+paperButton.addEventListener("click",() => {
+  playGame(1);
+})
+scissorButton.addEventListener("click",() => {
+  playGame(2);
+})
+resetButton.addEventListener("click",resetScore);
+autoPlayButton.addEventListener("click" ,autoPlay);
+
+
 scorePara.innerHTML = `Wins: ${score.win} | Lose: ${score.lose} | Draw: ${score.draw}`;
 
 

@@ -1,5 +1,7 @@
 const todoTask = [];
 
+const addButton = document.querySelector("#add-button");
+addButton.addEventListener("click", addTodoList);
 
 function addTodoList(){
   let taskEl = document.querySelector("#task-input");
@@ -27,17 +29,19 @@ function renderTask(){
   todoTask.forEach((task, index) => {
     tasksHtml += `<div>${task.name}</div>
     <div> ${task.date}</div>
-     <button id = 'delete-button'
-     onclick = "deleteTask(${index});">Delete</button>`
+     <button class = 'delete-button js-delete-button'>Delete</button>`
   }
 )
-
- 
   taskListEl.innerHTML = tasksHtml;
+
+  let deleteButtons = document.querySelectorAll(".js-delete-button");
+  deleteButtons.forEach((deleteButton,index) => {
+    deleteButton.addEventListener("click", () => {
+      // deleteTask(index);
+      todoTask.splice(index,1);
+      renderTask();
+    })
+  })
 } 
 
 
-function deleteTask(index){
-todoTask.splice(index,1);
-renderTask();
-}

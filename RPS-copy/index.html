@@ -9,15 +9,13 @@
 <body>
   <h3>Rock paper Scissors</h3>
   <div>
-  <button class = "rps-button" onclick="playGame(0); ">
+  <button class = "rps-button" id = "rock-button">
     <img class ="rps-images" src="images/rock.png" alt="">
   </button>
-  <button class = "rps-button"
-  onclick ="playGame(1);">
+  <button id = "paper-button" class = "rps-button">
    <img class ="rps-images" src="images/paper.png" alt="">
   </button>
-  <button class = "rps-button"
-  onclick ="playGame(2);">
+  <button id = "scissor-button" class = "rps-button">
      <img class ="rps-images" src="images/scissors.png" alt="">
   </button>
   <p id = "js-result"></p>
@@ -25,9 +23,8 @@
   </div>
   <br>
   <div>
-  <button onclick="resetScore();">Reset score</button>
-  <button id = "auto-play-button"
-  onclick = "autoPlay();">Auto Play</button>
+  <button id = 'reset-button'>Reset score</button>
+  <button id = "auto-play-button">Auto Play</button>
   </div>
   <script src="Scripts/index.js"></script>
 </body>
