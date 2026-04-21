@@ -18,6 +18,9 @@ let paperButton = document.querySelector("#paper-button");
 let scissorButton = document.querySelector("#scissor-button");
 let resetButton = document.querySelector("#reset-button");
 let autoPlayButton = document.querySelector("#auto-play-button");
+let body = document.body;
+let yesButton = document.querySelector(".yes-btn");
+let noButton = document.querySelector(".no-btn");
 
 
 rockButton.addEventListener("click", () => {
@@ -29,8 +32,26 @@ paperButton.addEventListener("click",() => {
 scissorButton.addEventListener("click",() => {
   playGame(2);
 })
-resetButton.addEventListener("click",resetScore);
+
+resetButton.addEventListener("click",showConfirmation);
+yesButton.addEventListener("click", () => {
+  resetScore();
+  document.querySelector('.confirm-box').style.display = "none";
+})
+
+
+resetButton.addEventListener("click",showConfirmation);
+noButton.addEventListener("click", () => {
+  document.querySelector('.confirm-box').style.display = "none";
+})
+
+
 autoPlayButton.addEventListener("click" ,autoPlay);
+
+
+body.addEventListener("keydown", event => {
+  if(event.key === 'Backspace') showConfirmation();
+});
 
 
 scorePara.innerHTML = `Wins: ${score.win} | Lose: ${score.lose} | Draw: ${score.draw}`;
@@ -103,3 +124,8 @@ function autoPlay(){
 }
 }
 
+
+
+function showConfirmation(){
+  document.querySelector('.confirm-box').style.display = "block";
+}
